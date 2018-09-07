@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Logdevise</title>
+    <%= csrf_meta_tags %>
+    <%= csp_meta_tag %>
+
+    <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track': 'reload' %>
+    <%= javascript_include_tag 'application', 'data-turbolinks-track': 'reload' %>
+  </head>
+
+  <body>
+    <div class="form-inline">
+      <nav class="navbar navbar-default" style="background-color: #A2D9CE">
+        <div class="container-fluid">
+          <div class="navbar-header">
+              <h3>Report</h3>
+          </div>
+          <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+            
+            <ul class="nav navbar-nav navbar-right">
+            <% if user_signed_in? %>
+              <li><%= link_to 'Edit profile', edit_user_registration_path , class: "btn" %></li>
+              <li><%= link_to "Logout", destroy_user_session_path, method: :delete , class: "btn" %></li>
+            <% else %>
+              <li><%= link_to "Sign up", new_user_registration_path, style: 'color: white;' , class: "btn btn-primary"%></li>
+              <li><%= link_to "Login", new_user_session_path, style: 'color: white;' ,class: "btn btn-warning" %></li>
+            <% end %>
+            </ul>
+          </div>  
+        </div>
+      </nav>
+        <% if notice %>
+          <p class="alert alert-success"><%= notice %></p>
+        <% end %>
+        <% if alert %>
+          <p class="alert alert-danger"><%= alert %></p>
+        <% end %>
+        <%= yield %>
+    </div>
+  </body>
+</html>

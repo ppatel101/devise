@@ -1,0 +1,14 @@
+<div>
+		<table class="table table-striped">
+			<tr>
+			  <th>Name</th>
+			  <th>Task</th>
+			</tr>
+			<% @reports.each do |form|%>
+			<tr>
+				<td> <%= form.name%> </td>
+				<td> <%= form.task%> </td>
+			</tr>
+			<%end%>
+		</table>
+</div>
