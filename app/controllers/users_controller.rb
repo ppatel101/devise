@@ -1,8 +1,6 @@
 class UsersController < ApplicationController
    before_action :set_user, only: [:show, :edit, :update, :destroy]
 
-  ...
-
   # GET /users/:id.:format
   def show
     # authorize! :read, @user
@@ -62,5 +60,4 @@ class UsersController < ApplicationController
       accessible << [ :password, :password_confirmation ] unless params[:user][:password].blank?
       params.require(:user).permit(accessible)
     end
-end
 end
