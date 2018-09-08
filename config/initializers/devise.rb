@@ -284,4 +284,8 @@ Devise.setup do |config|
 
   config.omniauth :google_oauth2, '921726016515-t2ucqde2ausqsu7h6trkrq4k81875f8o.apps.googleusercontent.com', 
                                   'VPAniT_EGfqCFvawwnPI55l-', {}
+  
+  #config.omniauth :twitter,  ENV['TWITTER_API'],  ENV['TWITTER_KEY']
+
+  config.omniauth :linked_in, '81l8x4hrhg11ru' , 'mCr3aXl94hbVmFER'                                  
 end
