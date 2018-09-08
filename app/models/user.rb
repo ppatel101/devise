@@ -52,8 +52,8 @@ def self.from_omniauth(auth, signed_in_resource = nil)
           
         user.provider = auth["provider"]
         user.uid = auth["uid"]
- 
-        user.oauth_user_name = auth["info"]["name"]            
+        
+        #user.oauth_user_name = auth ["username"]            
         user.email = auth["info"]["email"]
         user.save
       elsif auth.provider == "google_oauth2"
