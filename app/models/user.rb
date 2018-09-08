@@ -19,15 +19,16 @@ def self.from_omniauth(auth, signed_in_resource = nil)
         if auth.provider == "facebook"
         
           user.provider = auth.provider
-        user.uid = auth.uid
-          user.oauth_token = auth.credentials.token
+          user.uid = auth.uid
+          #user.oauth_token = auth.credentials.token
           
-          user.first_name = auth.extra.raw_info.first_name
-          user.last_name = auth.extra.raw_info.last_name
+          #user.first_name = auth.extra.raw_info.first_name
+          #user.last_name = auth.extra.raw_info.last_name
           user.email = auth.extra.raw_info.email
           # Facebook's token doesn't last forever
-        user.oauth_expires_at = Time.at(auth.credentials.expires_at)
+        #user.oauth_expires_at = Time.at(auth.credentials.expires_at)
         user.save
+      
       elsif auth.provider == "linkedin" 
       
         user.provider = auth.provider
@@ -47,14 +48,14 @@ def self.from_omniauth(auth, signed_in_resource = nil)
           
           user.oauth_user_name = auth.extra.raw_info.name
            
-           elsif auth.provider == "github"         
+       elsif auth.provider == "github"         
           
-          user.provider = auth["provider"]
-            user.uid = auth["uid"]
+        user.provider = auth["provider"]
+        user.uid = auth["uid"]
  
-            user.oauth_user_name = auth["info"]["name"]            
-         user.email = auth["info"]["email"]
-         user.save
+        user.oauth_user_name = auth["info"]["name"]            
+        user.email = auth["info"]["email"]
+        user.save
       elsif auth.provider == "google_oauth2"
              
              user.provider = auth.provider

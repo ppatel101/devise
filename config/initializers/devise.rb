@@ -286,7 +286,13 @@ Devise.setup do |config|
                                   'VPAniT_EGfqCFvawwnPI55l-', {}
   
   #config.omniauth :twitter,  ENV['TWITTER_API'],  ENV['TWITTER_KEY']
+  config.omniauth :github, 'cc1fbaee37c6850d8443', 
+                           '3dc01ebded0defc1fe29f8db52d0005488cf96a7', 
+                           scope: "user:email"
 
+
+  config.omniauth :facebook, '902703743257406', '9f3a232eee656d3b7c8fb97679d40fc3' ,
+                   :scope => 'email', info_fields: 'email'
 
   config.omniauth :linkedin, '81l8x4hrhg11ru' , 'mCr3aXl94hbVmFER'                                  
 end
