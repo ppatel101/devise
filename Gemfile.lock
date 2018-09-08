@@ -135,9 +135,8 @@ GEM
       jwt (>= 1.5)
       omniauth (>= 1.1.1)
       omniauth-oauth2 (>= 1.5)
-    omniauth-linkedin-oauth2 (0.2.5)
-      omniauth (~> 1.0)
-      omniauth-oauth2
+    omniauth-linkedin (0.2.0)
+      omniauth-oauth (~> 1.0)
     omniauth-oauth (1.1.0)
       oauth
       omniauth (~> 1.0)
@@ -250,7 +249,7 @@ DEPENDENCIES
   listen (>= 3.0.5, < 3.2)
   mini_racer
   omniauth-google-oauth2
-  omniauth-linkedin-oauth2
+  omniauth-linkedin
   omniauth-twitter
   pg
   puma (~> 3.11)

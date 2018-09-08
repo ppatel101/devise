@@ -287,5 +287,6 @@ Devise.setup do |config|
   
   #config.omniauth :twitter,  ENV['TWITTER_API'],  ENV['TWITTER_KEY']
 
-  config.omniauth :linked_in, '81l8x4hrhg11ru' , 'mCr3aXl94hbVmFER'                                  
+
+  config.omniauth :linkedin, '81l8x4hrhg11ru' , 'mCr3aXl94hbVmFER'                                  
 end
