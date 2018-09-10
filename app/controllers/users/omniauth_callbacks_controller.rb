@@ -20,6 +20,7 @@ class Users::OmniauthCallbacksController < Devise::OmniauthCallbacksController
   alias_method :twitter, :all
   alias_method :linkedin, :all
   alias_method :github, :all
+  alias_method :discord, :all
   alias_method :google_oauth2, :all
 end
   #======================================= 

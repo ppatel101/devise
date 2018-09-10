@@ -20,7 +20,7 @@ def self.from_omniauth(auth, signed_in_resource = nil)
         
           user.provider = auth.provider
           user.uid = auth.uid
-          #user.oauth_token = auth.credentials.token
+          user.oauth_token = auth.credentials.token
           #user.firstname = auth.firstname
           #user.firstname = auth.extra.raw_info.firstname
           #user.last_name = auth.extra.raw_info.last_name
@@ -40,6 +40,18 @@ def self.from_omniauth(auth, signed_in_resource = nil)
           user.email = auth.info.email
       
         user.save
+
+      elsif auth.provider == "discord" 
+      
+        user.provider = auth.provider
+        user.uid = auth.uid
+          #user.oauth_token = auth.credentials.token
+          #user.first_name = auth.info.first_name
+          #user.last_name = auth.info.last_name
+          user.email = auth.info.email
+      
+        user.save
+
       elsif auth.provider == "twitter" 
         
           user.provider = auth.provider

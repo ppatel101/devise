@@ -290,11 +290,9 @@ Devise.setup do |config|
                            '3dc01ebded0defc1fe29f8db52d0005488cf96a7', 
                            scope: "user:email" 
 
-
   config.omniauth :facebook, '902703743257406', '9f3a232eee656d3b7c8fb97679d40fc3'  
-                   #scope: 'user:firstname'
-                #info_fields: 'email,firstname,last_name,gender,birthday,location,picture'  
 
+  config.omniauth :linkedin, '81l8x4hrhg11ru' , 'mCr3aXl94hbVmFER' 
+  config.omniauth :discord, '488617493536178189' , 'SifmE08SlDyjoOC5VD16KpDvIWA4gi7n', scope: 'email'
 
-  config.omniauth :linkedin, '81l8x4hrhg11ru' , 'mCr3aXl94hbVmFER'                                  
 end
